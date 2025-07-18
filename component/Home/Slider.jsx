@@ -1,7 +1,9 @@
-import { View, Text, FlatList, Image ,StyleSheet, Dimensions} from 'react-native'
+import { View, FlatList, Image ,StyleSheet, Dimensions} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import {db} from './../../config/FirebaseConfig'
+
+
 
 export default function Slider() {
     
@@ -18,7 +20,8 @@ export default function Slider() {
     }
   return (
     <View style={{
-        marginTop:15
+        marginTop:15,
+
     }}>
       <FlatList 
       data={sliderList}
@@ -40,8 +43,8 @@ export default function Slider() {
 const styles = StyleSheet.create({
    silderImage:{
     width:Dimensions.get('screen').width*0.9,
-    height:147,
-    borderRadius:15,
-    marginRight:15,
+    height:149,
+    borderRadius:20,
+    marginRight:10,
    }
 })

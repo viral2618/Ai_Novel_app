@@ -51,8 +51,12 @@ export default function Profile() {
   ];
 
   return (
-    <View style={{  padding: 20 }}>
-      <Text style={{ fontFamily: "outfit-medium", fontSize: 30 }}>Profile</Text>
+    <View style={{  padding: 20, 
+      backgroundColor:Colors.BLACK,
+      flex:1,
+
+    }}>
+      <Text style={{ fontFamily: "outfit-medium", fontSize: 30 ,color:Colors.WHITE}}>Profile</Text>
       <View
         style={{ display: "flex", alignItems: "center", marginVertical: 25 }}
       >
@@ -62,16 +66,18 @@ export default function Profile() {
             width: 80,
             height: 80,
             borderRadius: 99,
+            borderWidth:3.5,
+            borderColor:Colors.WHITE,
           }}
         />
-        <Text style={{ fontFamily: "outfit-bold", fontSize: 20, marginTop: 9 }}>
+        <Text style={{ fontFamily: "outfit-bold", fontSize: 20, marginTop: 9 ,color:Colors.WHITE}}>
           {user?.fullName}
         </Text>
         <Text
           style={{
             fontFamily: "outfit-medium",
             fontSize: 16,
-            color: Colors.GRAY,
+            color: Colors.WHITE,
           }}
         >
           {user?.primaryEmailAddress?.emailAddress}
@@ -89,7 +95,7 @@ export default function Profile() {
               alignItems: "center",
               marginVertical: 4,
               gap:10,
-              backgroundColor:Colors.WHITE,
+              backgroundColor:Colors.GRAY,
               padding:8,
               borderRadius:15,
               marginTop:9
@@ -101,7 +107,7 @@ export default function Profile() {
               color={Colors.PRIMARY}
               style={{
                 padding: 20,
-                backgroundColor: Colors.Light_PRIMARY,
+                backgroundColor: Colors.RED,
                 borderRadius:5,
               }}
             />

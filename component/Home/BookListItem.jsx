@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
 import Colors from '../../constants/Colors'
 import { useRouter } from 'expo-router'
@@ -7,6 +7,7 @@ import MarkFav from '../BookDetails/MarkFav';
 export default function BookListItem({book}) {
     const router=useRouter();
   return (
+    <ScrollView>
     <TouchableOpacity 
     onPress={()=>router.push({
         pathname:'/book-details',
@@ -14,16 +15,17 @@ export default function BookListItem({book}) {
     })}
     style={{
         marginRight:15,
-        marginTop:3,
-        padding:18,
-        backgroundColor:Colors.WHITE,
-        borderRadius:10
+        padding:15,
+        backgroundColor:Colors.Light_PRIMARY,
+        borderRadius:10,
+        borderWidth:2,
+        borderColor:Colors.BLUE,
     }}>
       <View style={{
         position:'absolute',
         zIndex:10,
-        right:18,
-        top:19
+        right:22,
+        top:24
       }}>
         <MarkFav book={book} color={'white'}/>
       </View>
@@ -33,6 +35,8 @@ export default function BookListItem({book}) {
         height:190,
         objectFit:'cover',
         borderRadius:10,
+        borderWidth:5,
+        borderColor:Colors.WHITE,
       }}
       />
       <Text style={{
@@ -47,10 +51,11 @@ export default function BookListItem({book}) {
         alignItems:'center'
       }}>
         <Text style={{
-            color:Colors.GRAY,
+            color:Colors.WHITE,
             fontFamily:'outfit'
         }}>{book?.author}</Text>
       </View>
     </TouchableOpacity>
+    </ScrollView>
   )
 }

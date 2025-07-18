@@ -34,7 +34,6 @@ export default function UserPost() {
     );
     const querySnapShot = await getDocs(q);
     querySnapShot.forEach((doc) => {
-      console.log(doc.data());
       setUserPost((prev) => [...prev, doc.data()]);
     });
     setLoader(false)
@@ -87,6 +86,7 @@ export default function UserPost() {
                 <Text style={{
                     fontFamily:'outfit',
                     textAlign:'center',
+                    color:Colors.WHITE
                 }}>Delete</Text>
             </Pressable>
           </View>

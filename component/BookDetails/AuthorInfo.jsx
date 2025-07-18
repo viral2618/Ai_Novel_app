@@ -11,6 +11,7 @@ export default function AuthorInfo({ book }) {
         flexDirection:'row',
         gap:20,
       }}>
+        
         <Image
           source={{ uri: book?.userImage}}
           style={{
@@ -34,7 +35,7 @@ export default function AuthorInfo({ book }) {
               color: Colors.GRAY,
             }}
           >
-            Book Author
+            {book?.author}
           </Text>
         </View>
       </View>

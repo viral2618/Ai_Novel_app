@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React, { useState } from "react";
 import Colors from "./../../constants/Colors";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import StartCreateNewBook from "../../component/Mybooks/StartCreateNewBook";
+import StartCreateNewBook from "../Mybooks/StartCreateNewBook";
 
 export default function artificialIntelligence() {
   const [userBook, setUserBook] = useState([]);
@@ -10,7 +10,7 @@ export default function artificialIntelligence() {
     <View
       style={{
         padding: 25,
-        backgroundColor: Colors.WHITE,
+        backgroundColor: Colors.BLACK,
         height: "100%",
       }}
     >
@@ -27,13 +27,14 @@ export default function artificialIntelligence() {
             fontFamily: "outfit-bold",
             fontSize: 20,
             marginTop: 25,
+            color:Colors.WHITE
           }}
         >
           CREATE NEW BOOKS WITH AI
         </Text>
-        <Ionicons name="add-circle" size={50} color={Colors.PRIMARY} />
+        <Ionicons name="add-circle" size={50} color={Colors.WHITE} />
       </View>
-      {userBook?.length == 0 ? <StartCreateNewBook /> : null}
+      {userBook?.length == 0 ? <StartCreateNewBook/> : null}
     </View>
   );
 }

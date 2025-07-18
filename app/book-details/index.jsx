@@ -113,7 +113,7 @@ export default function BookDetails() {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex:2,
   },
   buttonContainer: {
     width: "100%",
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   },
   readBtn: {
     padding: 8,
-    backgroundColor: Colors.PRIMARY,
+    backgroundColor: Colors.WHITE,
     justifyContent: 'center',
     width: '100%', // Full width for buttons
     marginTop:5,
